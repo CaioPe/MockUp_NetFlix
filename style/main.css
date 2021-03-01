@@ -1,0 +1,127 @@
+:root
+{
+    --cinza:rgb(54, 48, 48);
+    --azullindo:rgb(54, 151, 207);  
+}
+
+*
+{margin:0;padding:0;box-sizing:border-box;}
+
+body
+{
+    background-color:var(--cinza);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header .container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo
+{
+    margin-left: 5px;
+    color:var(--azullindo);
+    font-family: 'Arial Black',Times, serif;
+    font-size: 35px;
+}
+
+header nav a
+{
+    text-decoration: none;
+    color: thistle;
+    margin-right:10px;
+}
+
+header nav a:hover /*hover significa quando o "mouse passa" no elemento*/
+{color:var(--azullindo);}
+
+/*filme principal*/
+
+.filme-principal
+{
+    font-size: 16px;
+    background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)100%), url('../img/Capa-MechaGodzilla2.jpg');/* Tive que usar ../ para que a imagem apareça tambem no offline Crome"
+    
+    /*esse modo condiciona a imagem ao seu tamanho enviado sem alterar com a tela*/
+    /*
+    object-fit: cover;
+    height: 650px;
+    width: 500px;
+    */
+
+    /* esse modo estica a imagem, esteticamente, melhor uma imagem com alto width*/
+    
+    height: 550px;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+
+    display: flex; /*oalinha o conteudo verticalmente*/
+    flex-direction: column; /* alinha com a coluna horizontal*/
+    justify-content: center; /* alinha ao centro*/
+    align-items: flex-start; /* pressiona o conteudo a esquerda */
+    
+}
+
+.filme-principal .title
+{
+    margin-top: 30%;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 45px;
+    word-spacing: 5px; /*espaçamento do titulo tava muito colado, ajusta o espaçamento por palavra*/
+}
+
+.filme-principal .descricao /*espaço entre a descrição e os botões*/
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.botao
+{
+    background-color: rgba(30, 144, 179, 0.5);
+    border: none;
+    color: white;
+
+    padding:15px 30px;
+    margin-right: 25px;
+
+    font-size: 12px;
+
+    transition: .5s ease all;
+}
+
+.botao:hover /*quando passa o mouse (:hover)*/
+{
+    background-color: white;
+    color: black;    /*transition: .5s ease;*/
+    padding-right: 50px;
+}
+
+.botao i
+{margin-right: 10px;}
+
+#info
+{align-items: flex-end;}
+
+.container
+{margin-left: 10px;}
+
+.filme-principal .container
+{width: 70%;}
+
+.box-filme
+{
+    /*margin-top: 3%;*/
+    height: 300px;
+    width: 100px;
+    display: block;
+  }
+
+.carrosel-filmes
+{margin-top: 5px;}
+
